@@ -1,0 +1,17 @@
+.Task {
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  /* border: 1px solid #333333; */
+}
+
+.Task:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.Title {
+  font-size: 20px;
+}

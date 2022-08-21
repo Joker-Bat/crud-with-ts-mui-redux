@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: auto;
+  padding: 50px;
+}
+
+.Title {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.Form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.TextField {
+  flex-basis: 75%;
+}
+
+.InputField {
+  padding: 0 12px;
+  font-size: 20px;
+  height: 40px;
+}
+
+.SubmitButton {
+  flex-basis: 25%;
+  min-width: 100px;
+  height: 40px;
+  font-size: 20px;
+  padding: 0;
+  display: block;
+}
+
+.Spinner {
+  /* margin-left: 0px; */
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+}
+
+.Spinner.Show {
+  animation: spinner 0.5s linear infinite;
+}
+
+.Spinner.Show::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Spinner::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.Alert {
+  margin-bottom: 20px;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
